@@ -11,12 +11,31 @@ function animateWelcomeScreen() {
             clearInterval(intervalId);
             setTimeout(() => {
                 element.style.display = 'none';
+                animateProgressLoader()
             }, 2000)
         }
         }, 500)
 }
 animateWelcomeScreen();
+function animateProgressLoader(){
+    const loaderElement = document.getElementsByClassName('loader')[0];
+    loaderElement.style.display = 'block';
+    const loaderPercentsElement = document.getElementsByClassName('loader-percents')[0];
+    let percents = 0;
+    const intervalId = setInterval(() => {
+        loaderPercentsElement.innerHTML = `${percents}%`;
+        if(percents >= 100){
+            clearInterval(intervalId);
+            setTimeout(() => {
+                const loaderWrapperElement = document.getElementsByClassName('loader-wrapper')[0];
+                loaderWrapperElement.style.display = 'none'
+            },2000)
+        }
+        percents++;
 
+    },50)
+
+}
 function animateCardsBoxes(){
     const card1 = document.getElementById('card-box-1');
     const card2 = document.getElementById('card-box-2');
