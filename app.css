@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+html, body{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    direction: rtl;
+}
+
+body::after {
+    content: "";
+    background: url('./assets/images.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
+.welcome-animation{
+    height: 100%;
+    width: 100%;
+    color: red;
+    direction: ltr;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 150px;
+    transition: font-size .5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.game-container{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.cards-boxes{
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+
+.card-box{
+    border: solid black 12px;
+    border-radius:10px;
+    height: 170px;
+    width: 110px;
+    background-image:
+linear-gradient(to bottom, rgba(0, 0, 0, 0.5), 
+rgb(170, 74, 68, 0.7)),url('./assets/images.jpg');
+    transition: transform 1s ease-in;
+}
+
+.card-1{
+    transform: translateX(130px);
+}
+
+.card-2{
+    position: absolute;
+    left: 0;
+    transform: translateX(-130px); 
+}
+.game-instructions{
+    border:solid black 2px;
+    background-color: black;
+}
