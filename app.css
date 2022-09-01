@@ -107,10 +107,8 @@ rgb(170, 74, 68, 0.7)),url('./assets/images.jpg');
   }
   
   #my-bar {
-    width: 1%;
     height:30px;
     background-color: red;
-    transition: width 10s linear;
   }
   .action-btns{
     width: 100%;
@@ -138,16 +136,13 @@ rgb(170, 74, 68, 0.7)),url('./assets/images.jpg');
     height: 170px;
     width: 110px;
   }
-  .instruction-wrapper{
+  .instruction{
     position: absolute;
     top: 30%;
-    right: calc(50% - 100px);
-    /* right: 480px; */
-    height: 300px;
-    width: 300px;
-    background-color: black;
-    border: solid  2px black;
-    border-radius: 30%;
+    right: calc(50% - 300px);
+    background-color: gray;
+    border: solid  2px rgb(46, 44, 44)k;
+    border-radius: 15px;
     display: none;
   }
  
