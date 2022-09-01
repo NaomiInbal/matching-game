@@ -65,14 +65,16 @@ body::after {
     height: 100%;
     width: 100%;
     overflow: hidden;
-    display: flex;
+    display: none;
     flex-direction: column;
+    align-items: center;
 }
 
 .cards-boxes{
     position: relative;
     width: 100%;
     display: flex;
+    margin-top: 50px;
 }
 
 .card-box{
@@ -80,22 +82,72 @@ body::after {
     border-radius:10px;
     height: 170px;
     width: 110px;
+    transition: transform 1s ease-in;
     background-image:
 linear-gradient(to bottom, rgba(0, 0, 0, 0.5), 
 rgb(170, 74, 68, 0.7)),url('./assets/images.jpg');
-    transition: transform 1s ease-in;
 }
 
-.card-1{
+.card-box-1{
     transform: translateX(130px);
 }
 
-.card-2{
+.card-box-2{
     position: absolute;
     left: 0;
     transform: translateX(-130px); 
 }
 .game-instructions{
-    border:solid black 2px;
+    border:solid  2px black;
     background-color: black;
 }
+#my-progress {
+    width: 100%;
+    background-color: grey;
+  }
+  
+  #my-bar {
+    width: 1%;
+    height:30px;
+    background-color: red;
+    transition: width 10s linear;
+  }
+  .action-btns{
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .v-btn, .x-btn{
+    background-color: black;   
+   border-radius: 50%;
+   height: 100px;
+   width: 100px;
+   color:#f3f3f3;
+   font-size: 40px;
+   font-weight: 900;
+
+  }
+  .v-btn{
+    border: solid 5px green;
+  }
+  .x-btn{
+    border: solid 5px red;
+  }
+  .card-img-2 , .card-img-1{
+    height: 170px;
+    width: 110px;
+  }
+  .instruction-wrapper{
+    position: absolute;
+    top: 30%;
+    right: calc(50% - 100px);
+    /* right: 480px; */
+    height: 300px;
+    width: 300px;
+    background-color: black;
+    border: solid  2px black;
+    border-radius: 30%;
+    display: none;
+  }
+ 
