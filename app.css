@@ -112,12 +112,12 @@ rgb(170, 74, 68, 0.7)),url('./assets/images.jpg');
   }
   .action-btns{
     width: 100%;
-    margin-top: 100px;
+    margin-top: 80px;
     display: flex;
     justify-content: space-around;
   }
   .v-btn, .x-btn{
-    background-color: black;   
+  background-color: black;   
    border-radius: 50%;
    height: 100px;
    width: 100px;
@@ -144,5 +144,16 @@ rgb(170, 74, 68, 0.7)),url('./assets/images.jpg');
     border: solid  2px rgb(46, 44, 44)k;
     border-radius: 15px;
     display: none;
+  }
+  .wrapper-score{
+    display: flex;
+    flex-direction: row;
+   
+  }
+  .score-value{
+    margin-top:25px ;
+    color: #fafd0f;
+    font-size: 50px;
+    margin-right: -58px;
   }
  

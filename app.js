@@ -1,7 +1,7 @@
 
-
+ 
 function animateWelcomeScreen() {
-    const colors = ["red", "violet", "green", "yellow", "blue", "purple"];
+    const colors = ["red", "#7f00ff", "#4ee44e", "#ffa500", "blue", "#ff00ff"];
     let colorIndex = 0;
     const intervalId = setInterval(() => {
         const element = document.getElementsByClassName("welcome-animation")[0];
