@@ -6,4 +6,4 @@ app.use(express.static('.', express.static('maomi')));
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, '/app.html'))
 })
-app.listen(3001);
+app.listen( process.env.PORT || 3001);
