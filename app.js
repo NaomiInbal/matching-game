@@ -13,7 +13,8 @@ function animateWelcomeScreen() {
             clearInterval(intervalId);
             setTimeout(() => {
                 element.style.display = "none";                
-            }, 2000);        }
+            }, 2000);       
+         }
     }, 500);
 }
 //function of the timer
@@ -36,9 +37,9 @@ function animateLoaderCircle() {
 
 function main(){
     animateWelcomeScreen();
-    setTimeout(() => {
-        animateLoaderCircle();
-    },5000)
-   
+    const sanimateLoaderCirclePromise = new Promise(
+        (resolve, reject)=>{
+            setTimeout(resolve, 5000)        
+        }).then(animateLoaderCircle)
 }
 main();

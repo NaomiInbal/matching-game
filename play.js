@@ -139,11 +139,15 @@ function onUserSuccess() {
     //changes the color of the card's border to green for 300s
     cardBorder1.style.borderColor = "#1FFF0F"; 
     cardBorder2.style.borderColor = "#1FFF0F";
-    setTimeout(() => {
-        cardBorder1.style.borderColor = "black";
-        cardBorder2.style.borderColor = "black";
-        play();
-    }, 300);
+    const callPlay = new Promise(
+        (resolve, reject)=>{
+            setTimeout(resolve, 300)        
+        });
+        callPlay.then(() => {
+            cardBorder1.style.borderColor = "black";
+            cardBorder2.style.borderColor = "black";
+            play();
+        })
 }
 //if the user success
 function onUserFailure() {
@@ -157,20 +161,26 @@ function onUserFailure() {
     let cardBorder2 = document.getElementsByClassName("card-box-2")[0];
     cardBorder1.style.borderColor = "red";
     cardBorder2.style.borderColor = "red";
-    setTimeout(() => {
-        cardBorder1.style.borderColor = "black";
-        cardBorder2.style.borderColor = "black";
-        play();
-    }, 300);
+    const callPlay = new Promise(
+        (resolve, reject)=>{
+            setTimeout(resolve, 300)        
+        });
+        callPlay.then(() => {
+            cardBorder1.style.borderColor = "black";
+            cardBorder2.style.borderColor = "black";
+            play();
+        })
 }
 
 function main() {
         animateCardsBoxes();
-        setTimeout(() => {
-            showInstruction();
-        }, 2000);
-        setTimeout(() => {
-            listenToUserChoiceAndPlay();           
-        }, 7000)
+        const showInstructionPromise = new Promise(
+            (resolve, reject)=>{
+                setTimeout(resolve, 2000)        
+            }).then(showInstruction)
+            const listenToUserChoicePromise = new Promise(
+                (resolve, reject)=>{
+                    setTimeout(resolve, 7000)        
+                }).then(listenToUserChoiceAndPlay)
 }
 main();
