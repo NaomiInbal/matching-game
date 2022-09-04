@@ -26,6 +26,7 @@ function animateLoaderCircle() {
     const intervalId = setInterval(() => {
         loaderPercentsElement.innerHTML = `${percents}%`;
         if (percents >= 100) {
+            clearInterval(intervalId)
             window.location.href = './play.html'
         }
         percents++;
