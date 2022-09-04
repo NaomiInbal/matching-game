@@ -19,7 +19,7 @@ body::after {
     position: absolute;
     z-index: -1;   
   }
-.welcome-animation{
+.welcome-animation, .end-animation{
     height: 100%;
     width: 100%;
     color: red;
@@ -31,6 +31,9 @@ body::after {
     font-family: 'Dancing Script', cursive;
     font-size: 150px;
     transition: font-size .5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.end-animation{
+  height: 80%;
 }
 
 .loader-wrapper{
@@ -131,6 +134,17 @@ rgb(170, 74, 68, 0.7)),url('./assets/images.jpg');
   }
   .x-btn{
     border: solid 5px red;
+  }
+  .start-over-btn{
+    border: solid 5px rgb(149, 0, 255);
+    background-color: black;   
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    color:#f3f3f3;
+    font-size: 20px;
+    font-weight: 900;
+    margin-right: calc(50% - 50px);
   }
   .card-img-2 , .card-img-1{
     height: 170px;
